@@ -64,10 +64,17 @@ p{
 .cta-button:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.3); background-color:var(--blue-light); color:var(--green-dark); }
 .cta-button:focus-visible{ outline:none; border-color:var(--green-light); }
 
-/* Contact */
-.contact{
-  /* Keep page background visible outside the card */
-  padding:0 20px 50px;
+/* Contact section = full-width blue row */
+.contact {
+  background-color: var(--blue-deep); /* deep blue background row */
+  padding: 60px 20px; /* vertical + horizontal spacing */
+}
+
+/* Inner container to constrain width */
+.contact-inner {
+  max-width: 720px;
+  margin: 0 auto; /* center horizontally */
+  text-align: center;
 }
 
 .contact h2{
