@@ -1,3 +1,62 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #112F30; /* brand dark green */
+  color: #F4F4F4; /* off-white for readability */
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Hero section */
+.hero {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+/* Headline */
+h1 {
+  font-size: 2.5em;
+  color: #D8F2A0; /* light green */
+  margin-bottom: 20px;
+}
+
+/* Paragraph text */
+p {
+  font-size: 1.2em;
+  color: #A9D6F7; /* light blue */
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Call-to-action button (universal) */
+.cta-button {
+  display: inline-block;
+  background-color: #ED7117; /* bright orange */
+  color: #ffffff;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.cta-button:hover {
+  background-color: #A9D6F7; /* light blue hover */
+  color: #112F30; /* dark text */
+}
+
 /* Contact section */
 .contact {
   background-color: #1F4765; /* deep blue */
@@ -16,7 +75,25 @@
   margin-bottom: 20px;
 }
 
-/* Responsive tweaks */
+/* LinkedIn button */
+.linkedin {
+  background-color: #0077B5; /* LinkedIn blue */
+}
+
+.linkedin:hover {
+  background-color: #A9D6F7; /* brand light blue */
+  color: #112F30; /* dark text */
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #A9D6F7;
+}
+
+/* Responsive tweaks for small screens */
 @media (max-width: 600px) {
   h1 {
     font-size: 2em;
@@ -37,13 +114,4 @@
   .logo {
     width: 120px;
   }
-}
-/* LinkedIn button variation */
-.linkedin {
-  background-color: #0077B5; /* LinkedIn blue */
-}
-
-.linkedin:hover {
-  background-color: #A9D6F7; /* brand light blue */
-  color: #112F30; /* dark text on hover */
 }
