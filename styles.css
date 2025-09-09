@@ -204,8 +204,8 @@ footer{
 
 /* Middle logo tooltip aligned to the right side */
 .footer-logos .logo-tooltip:nth-child(2) .tooltip-text {
-  left: auto;
-  right: 0;
+  left: 0;
+  right: auto;
   transform: translateX(0);
 }
 
