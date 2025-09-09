@@ -22,14 +22,14 @@ body{
 
 /* Hero */
 .hero{
-  padding:40px 20px 60px; /* ✅ reduced top padding */
+  padding:36px 20px 60px;           /* tighter top spacing */
   max-width:1000px;
   margin:0 auto 60px;
 }
 
 .logo{
   width:240px;
-  margin-bottom:40px; /* ✅ increased space below logo */
+  margin-bottom:40px;               /* a bit more space to headline */
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.25));
 }
 
@@ -47,15 +47,7 @@ p{
   max-width:760px;
 }
 
-/* Hero actions */
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-/* Buttons */
+/* Primary CTA */
 .cta-button{
   display:inline-block;
   background-color:var(--orange);
@@ -74,17 +66,19 @@ p{
 
 /* Contact */
 .contact{
-  padding:50px 20px;
-  background:var(--blue-deep);
+  /* Keep page background visible outside the card */
+  padding:0 20px 50px;
 }
 
+/* SOLID deep-blue card so no green shows through */
 .contact--card{
-  max-width:720px;
-  margin:38px auto 0;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
+  background:var(--blue-deep);      /* solid, not translucent */
+  max-width:720px;                  /* slender card */
+  margin:0 auto;
+  padding:50px 24px;                /* card’s own padding */
   border-radius:16px;
   box-shadow:0 6px 18px rgba(0,0,0,.22);
+  text-align:center;
 }
 
 .contact h2{
@@ -111,7 +105,7 @@ p{
 .contact-buttons .cta-button{
   flex:none;
   min-width:auto;
-  padding:10px 20px;
+  padding:10px 20px;                /* compact buttons */
   font-size:1rem;
   box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
@@ -122,12 +116,17 @@ p{
 /* Footer */
 footer{
   margin-top:60px;
-  padding:20px 30px;
+  padding:16px 30px;
   font-size:.95rem;
   color:var(--blue-light);
-  display:flex; /* ✅ flexbox layout */
-  justify-content:space-between; /* ✅ logos left, text right */
+
+  /* Alignment fix: override body center */
+  text-align:initial;
+
+  display:flex;
+  justify-content:space-between;    /* logos left, text right */
   align-items:center;
+  gap:20px;
   flex-wrap:wrap;
 }
 
@@ -138,14 +137,14 @@ footer{
 }
 
 .footer-logo{
-  height:40px; /* adjust logo size */
+  height:40px;                      /* control logo size */
   width:auto;
-  opacity:0.9;
+  opacity:0.95;
 }
 
 .footer-text{
+  margin-left:auto;                 /* push to the right edge */
   text-align:right;
-  flex:1;
 }
 
 /* Responsive */
@@ -154,6 +153,6 @@ footer{
   p{ font-size:1rem; }
   .logo{ width:165px; }
   .contact-buttons{ flex-direction:column; gap:12px; }
-  footer{ flex-direction:column; text-align:center; gap:10px; }
-  .footer-text{ text-align:center; }
+  footer{ justify-content:center; }
+  .footer-text{ margin-left:0; text-align:center; }
 }
