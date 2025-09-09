@@ -1,134 +1,115 @@
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #102c30; /* brand dark green */
-  color: #F4F4F4; /* off-white for readability */
-  text-align: center;
-  line-height: 1.6;
+/* Base */
+:root{
+  --green-dark:#102c30;
+  --blue-deep:#1F4765;
+  --blue-light:#A9D6F7;
+  --green-light:#D8F2A0;
+  --orange:#ED7117;
+  --offwhite:#F4F4F4;
 }
 
-/* Hero section */
-.hero {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  background-color:var(--green-dark);
+  color:var(--offwhite);
+  text-align:center;
+  line-height:1.6;
 }
 
-/* Logo */
-.logo {
-  width: 220px;
-  margin-bottom: 30px;
+/* Hero */
+.hero{
+  padding:88px 20px 72px;
+  max-width:900px;
+  margin:0 auto;
 }
 
-/* Headline */
-h1 {
-  font-size: 2.5em;
-  color: #D8F2A0; /* light green */
-  margin-bottom: 20px;
+.logo{
+  width:180px; /* slightly larger */
+  margin-bottom:30px;
 }
 
-/* Paragraph text */
-p {
-  font-size: 1.2em;
-  color: #A9D6F7; /* light blue */
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+h1{
+  font-size:2.6rem;
+  line-height:1.2;
+  color:var(--green-light);
+  margin:0 0 18px;
 }
 
-/* Call-to-action button (universal) */
-.cta-button {
-  display: inline-block;
-  background-color: #ED7117; /* bright orange */
-  color: #ffffff;
-  padding: 15px 35px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+p{
+  font-size:1.15rem;
+  color:var(--blue-light);
+  margin:0 auto 36px;
+  max-width:720px;
 }
 
-.cta-button:hover {
-  background-color: #A9D6F7; /* light blue hover */
-  color: #112F30; /* dark text */
+/* Buttons */
+.cta-button{
+  display:inline-block;
+  background-color:var(--orange);
+  color:#fff;
+  padding:15px 34px;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:10px;
+  font-size:1.1rem;
+  transition:transform .12s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+  box-shadow:0 6px 14px rgba(0,0,0,.28);
+  border:2px solid transparent;
+}
+.cta-button:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.3); background-color:var(--blue-light); color:var(--green-dark); }
+.cta-button:focus-visible{ outline: none; border-color: var(--green-light); }
+
+/* Contact */
+.contact{
+  background-color:var(--blue-deep);
+  padding:64px 20px;
 }
 
-/* Contact buttons container */
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+.contact h2{
+  margin:0 0 14px;
+  color:var(--green-light);
+  font-size:1.8rem;
 }
 
-/* Make both buttons equal size */
-.contact-buttons .cta-button {
-  flex: 1;
-  text-align: center;
+.contact p{
+  color:var(--blue-light);
+  margin-bottom:18px;
 }
 
-/* Responsive stacking for mobile */
-@media (max-width: 600px) {
-  .contact-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:16px;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-/* Contact section */
-.contact {
-  background-color: #1F4765; /* deep blue */
-  padding: 60px 20px;
-  color: #ffffff;
+.contact-buttons .cta-button{
+  flex:1;
+  min-width:220px;
+  text-align:center;
 }
 
-.contact h2 {
-  color: #D8F2A0; /* light green headline */
-  margin-bottom: 20px;
-}
-
-.contact p {
-  color: #A9D6F7; /* light blue text */
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* LinkedIn button */
-.linkedin {
-  background-color: #0077B5; /* LinkedIn blue */
-}
-
-.linkedin:hover {
-  background-color: #A9D6F7; /* brand light blue */
-  color: #112F30; /* dark text */
-}
+.linkedin{ background-color:#0077B5; }
+.linkedin:hover{ background-color:var(--blue-light); color:var(--green-dark); }
 
 /* Footer */
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #A9D6F7;
+footer{
+  margin-top:60px;
+  padding:20px;
+  font-size:.95rem;
+  color:var(--blue-light);
 }
 
-/* Responsive tweaks for small screens */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  .cta-button {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    font-size: 1em;
-    padding: 12px 20px;
-  }
+/* Responsive */
+@media (max-width:700px){
+  h1{ font-size:2.1rem; }
+  p{ font-size:1rem; }
+  .contact-buttons{ flex-direction:column; gap:14px; }
+  .logo{ width:160px; }
+}
