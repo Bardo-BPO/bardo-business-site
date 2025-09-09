@@ -202,6 +202,13 @@ footer{
   }
 }
 
+/* Middle logo tooltip aligned to the right side */
+.footer-logos .logo-tooltip:nth-child(2) .tooltip-text {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+
 /* Responsive */
 @media (max-width:760px){
   h1{ font-size:2.2rem; }
