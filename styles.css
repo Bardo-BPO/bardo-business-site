@@ -22,15 +22,15 @@ body{
 
 /* Hero */
 .hero{
-  padding:92px 20px 70px;
+  padding:40px 20px 60px; /* ✅ reduced top padding */
   max-width:1000px;
-  margin:0 auto;
-  margin-bottom:60px; /* ✅ more spacing before contact box */
+  margin:0 auto 60px;
 }
 
 .logo{
-  width:230px;
-  margin-bottom:30px;
+  width:180px;
+  margin-bottom:40px; /* ✅ increased space below logo */
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.25));
 }
 
 h1{
@@ -47,20 +47,12 @@ p{
   max-width:760px;
 }
 
-/* Hero actions */
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
 /* Buttons */
 .cta-button{
   display:inline-block;
   background-color:var(--orange);
   color:var(--white);
-  padding:15px 35px;
+  padding:15px 28px;
   text-decoration:none;
   font-weight:700;
   border-radius:10px;
@@ -70,27 +62,15 @@ p{
   border:2px solid transparent;
 }
 .cta-button:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.3); background-color:var(--blue-light); color:var(--green-dark); }
-.cta-button:focus-visible{ outline:none; border-color:var(--green-light); }
-
-/* Secondary style for Calendly */
-.cta-secondary{
-  background-color:transparent;
-  color:var(--offwhite);
-  border-color:var(--orange);
-}
-.cta-secondary:hover{
-  background-color:var(--orange);
-  color:#fff;
-}
 
 /* Contact */
 .contact{
-  padding:50px 20px; /* ✅ less padding (slender look) */
+  padding:50px 20px;
   background:var(--blue-deep);
 }
 
 .contact--card{
-  max-width:720px; /* ✅ narrower box */
+  max-width:720px;
   margin:38px auto 0;
   background:rgba(255,255,255,0.03);
   border:1px solid rgba(255,255,255,0.08);
@@ -110,7 +90,7 @@ p{
   max-width:640px;
 }
 
-/* Contact buttons row */
+/* Contact buttons */
 .contact-buttons{
   display:flex;
   justify-content:center;
@@ -119,11 +99,10 @@ p{
   flex-wrap:wrap;
 }
 
-/* ✅ smaller buttons, no forced equal sizing */
 .contact-buttons .cta-button{
   flex:none;
   min-width:auto;
-  padding:10px 20px; /* tighter fit */
+  padding:10px 20px;
   font-size:1rem;
   box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
@@ -133,9 +112,31 @@ p{
 
 /* Footer */
 footer{
-  padding:26px 20px 40px;
+  margin-top:60px;
+  padding:20px 30px;
   font-size:.95rem;
   color:var(--blue-light);
+  display:flex; /* ✅ flexbox layout */
+  justify-content:space-between; /* ✅ logos left, text right */
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.footer-logos{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.footer-logo{
+  height:40px; /* adjust logo size */
+  width:auto;
+  opacity:0.9;
+}
+
+.footer-text{
+  text-align:right;
+  flex:1;
 }
 
 /* Responsive */
@@ -144,4 +145,6 @@ footer{
   p{ font-size:1rem; }
   .logo{ width:165px; }
   .contact-buttons{ flex-direction:column; gap:12px; }
+  footer{ flex-direction:column; text-align:center; gap:10px; }
+  .footer-text{ text-align:center; }
 }
