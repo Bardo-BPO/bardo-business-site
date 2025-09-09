@@ -47,6 +47,14 @@ p{
   max-width:760px;
 }
 
+/* Hero actions */
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
 /* Buttons */
 .cta-button{
   display:inline-block;
