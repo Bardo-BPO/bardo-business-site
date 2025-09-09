@@ -70,6 +70,7 @@ p{
   border:2px solid transparent;
 }
 .cta-button:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.3); background-color:var(--blue-light); color:var(--green-dark); }
+.cta-button:focus-visible{ outline:none; border-color:var(--green-light); }
 
 /* Contact */
 .contact{
