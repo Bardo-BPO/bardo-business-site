@@ -68,6 +68,9 @@ p{
 .contact {
   background-color: var(--blue-deep); /* deep blue background row */
   padding: 60px 20px; /* vertical + horizontal spacing */
+
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3),   /* subtle shadow above */
+              0  4px 10px rgba(0,0,0,0.3);   /* subtle shadow below */ 
 }
 
 /* Inner container to constrain width */
