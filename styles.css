@@ -1,47 +1,66 @@
-
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #112F30;
-  color: #ffffff;
+  background-color: #112F30; /* dark green brand background */
+  color: #F4F4F4; /* off-white for better contrast */
   text-align: center;
+  line-height: 1.6;
 }
 
+/* Hero section */
 .hero {
-  padding: 60px 20px;
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Logo */
 .logo {
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
+/* Headline */
 h1 {
   font-size: 2.5em;
-  color: #D8F2A0;
+  color: #D8F2A0; /* light green highlight */
   margin-bottom: 20px;
 }
 
+/* Paragraph text */
 p {
   font-size: 1.2em;
-  color: #A9D6F7;
-  margin-bottom: 30px;
-  max-width: 600px;
+  color: #A9D6F7; /* light blue */
+  margin-bottom: 40px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Call-to-action button */
 .cta-button {
-  background-color: #ED7117;
+  display: inline-block;
+  background-color: #ED7117; /* bright orange */
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 15px 35px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .cta-button:hover {
-  background-color: #A9D6F7;
-  color: #112F30;
+  background-color: #A9D6F7; /* light blue hover */
+  color: #112F30; /* dark green text */
+}
+
+/* Add subtle footer if needed */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #A9D6F7;
 }
