@@ -1,66 +1,40 @@
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #112F30; /* dark green brand background */
-  color: #F4F4F4; /* off-white for better contrast */
-  text-align: center;
-  line-height: 1.6;
+/* Contact section */
+.contact {
+  background-color: #1F4765; /* deep blue */
+  padding: 60px 20px;
+  color: #ffffff;
 }
 
-/* Hero section */
-.hero {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Logo */
-.logo {
-  width: 150px;
-  margin-bottom: 30px;
-}
-
-/* Headline */
-h1 {
-  font-size: 2.5em;
-  color: #D8F2A0; /* light green highlight */
+.contact h2 {
+  color: #D8F2A0; /* light green headline */
   margin-bottom: 20px;
 }
 
-/* Paragraph text */
-p {
-  font-size: 1.2em;
-  color: #A9D6F7; /* light blue */
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Call-to-action button */
-.cta-button {
-  display: inline-block;
-  background-color: #ED7117; /* bright orange */
-  color: #ffffff;
-  padding: 15px 35px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
+.contact p {
+  color: #A9D6F7; /* light blue text */
   font-size: 1.1em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
 }
 
-.cta-button:hover {
-  background-color: #A9D6F7; /* light blue hover */
-  color: #112F30; /* dark green text */
-}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
 
-/* Add subtle footer if needed */
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #A9D6F7;
+  p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  .logo {
+    width: 120px;
+  }
 }
