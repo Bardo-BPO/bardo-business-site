@@ -209,6 +209,14 @@ footer{
   transform: translateX(0);
 }
 
+/* Right logo aligned Right */
+  .logo-tooltip:last-child .tooltip-text {
+    left: 0;
+    right: auto;
+    transform: translateX(0);
+  }
+}
+
 .footer-text{
   text-align:right;
   flex:1;
