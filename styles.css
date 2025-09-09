@@ -200,3 +200,73 @@ footer {
     width: 120px;
   }
 }
+/* === Contact section tuning === */
+
+/* (a) Space between the header CTA and the Contact box */
+.hero { 
+  margin-bottom: 36px;                 /* breathing room below the hero */
+}
+/* Safety: also add top margin to the contact section itself */
+#contact { 
+  margin-top: 16px;
+}
+
+/* (b) Make the dark blue box slender + full width (within your page) */
+#contact {
+  /* Outline look (dark blue), but slimmer */
+  border: 2px solid #0B5FC1;           /* adjust to your brand blue */
+  border-radius: 12px;                  /* subtle rounding; use 0 for square */
+  padding: 14px 18px;                   /* slimmer internal spacing */
+  background: #F8FBFF;                  /* optional soft tint; remove if not wanted */
+
+  /* Full width of page content; centered if your page has a max-width */
+  width: 100%;
+  max-width: 1200px;                    /* optional; tweak or remove */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* A light lift; remove if you want no shadow */
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.08);
+}
+
+/* Headings look tidy in the slimmer box */
+#contact h2 {
+  margin: 0 0 8px 0;
+}
+#contact p {
+  margin: 0 0 12px 0;
+}
+
+/* Keep the contact actions laid out neatly */
+#contact .contact-buttons {
+  display: flex;
+  gap: 10px;            /* space between Email and LinkedIn boxes */
+  flex-wrap: wrap;      /* wrap on small screens */
+}
+
+/* (c) Make the Email (orange) and LinkedIn (blue) boxes smaller inside Contact */
+#contact .cta-button {
+  font-size: 0.95rem;   /* slightly smaller text */
+  padding: 8px 14px;    /* smaller pill size */
+  line-height: 1.2;
+  border-radius: 999px; /* keep pill shape */
+}
+
+/* Optional: if your generic .cta-button is very large, you can keep the hero CTA big: */
+.hero .cta-button {
+  font-size: 1.05rem;
+  padding: 12px 20px;
+}
+
+/* If your LinkedIn button uses this class for color, you can leave it as-is.
+   The size is already reduced by #contact .cta-button above. If you need the
+   color explicitly: */
+#contact .cta-button.linkedin {
+  background-color: #0B5FC1;  /* LinkedIn blue-ish; change if you have a brand value */
+  color: #fff;
+}
+
+/* Mobile polish: slightly tighter spacing on small screens */
+@media (max-width: 600px) {
+  #contact { padding: 12px 14px; }
+}
