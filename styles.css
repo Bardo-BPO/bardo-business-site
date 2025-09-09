@@ -38,3 +38,12 @@
     width: 120px;
   }
 }
+/* LinkedIn button variation */
+.linkedin {
+  background-color: #0077B5; /* LinkedIn blue */
+}
+
+.linkedin:hover {
+  background-color: #A9D6F7; /* brand light blue */
+  color: #112F30; /* dark text on hover */
+}
