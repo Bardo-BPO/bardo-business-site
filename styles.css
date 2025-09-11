@@ -141,11 +141,6 @@ footer{
   opacity:0.95;
 }
 
-.footer-text{
-  margin-left:auto;                 /* push to the right edge */
-  text-align:right;
-}
-
 /* Tooltip wrapper */
 .logo-tooltip {
   position: relative;
@@ -196,9 +191,15 @@ footer{
 
 /* All tooltips aligned right */
 .footer-logos .logo-tooltip .tooltip-text {
-  left: auto;
-  right: 0;
+  left: 0;
+  right: auto;
   transform: translateX(0);
+}
+
+.footer-text{
+  display: flex
+  margin-left:auto;                 /* push to the right edge */
+  text-align:right;
 }
 
 /* Responsive */
