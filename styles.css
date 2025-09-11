@@ -194,20 +194,13 @@ footer{
   opacity: 1;
 }
 
-/* Prevent only the left tooltips from going off-screen */
-@media (min-width: 600px) {
-  .logo-tooltip:first-child .tooltip-text {
-    left: 0;
-    transform: translateX(0);
-  }
-}
-
-/* Middle logo tooltip aligned to the right side */
-.footer-logos .logo-tooltip:nth-child(2) .tooltip-text {
-  left: 0;
-  right: auto;
+/* All tooltips aligned right */
+.footer-logos .logo-tooltip .tooltip-text {
+  left: auto;
+  right: 0;
   transform: translateX(0);
 }
+
 
 /* Right logo aligned Right */
   .logo-tooltip:last-child .tooltip-text {
