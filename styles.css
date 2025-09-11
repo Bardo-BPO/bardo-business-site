@@ -197,7 +197,6 @@ footer{
 }
 
 .footer-text{
-  display: flex
   margin-left:auto;                 /* push to the right edge */
   text-align:right;
 }
