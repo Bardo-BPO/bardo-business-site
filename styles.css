@@ -201,19 +201,6 @@ footer{
   transform: translateX(0);
 }
 
-
-/* Right logo aligned Right */
-  .logo-tooltip:last-child .tooltip-text {
-    left: 0;
-    right: auto;
-    transform: translateX(0);
-  }
-}
-.footer-text {
-  margin-left: auto;   /* push it to the far right */
-  text-align: right;
-}
-
 /* Responsive */
 @media (max-width:760px){
   h1{ font-size:2.2rem; }
